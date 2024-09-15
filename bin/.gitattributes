@@ -1,0 +1,4 @@
+
+lc filter=git-crypt diff=git-crypt
+repo-status filter=git-crypt diff=git-crypt
+sync-projects filter=git-crypt diff=git-crypt

@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+
+import json
+import subprocess
+import sys
+
+
+# Function to run hyprctl command and get the workspaces
+def get_workspaces():
+    output = subprocess.check_output(['hyprctl', 'workspaces', '-j'])  # -j for JSON output
+    return json.loads(output)
+
+# Function to get the next available workspace number
+def get_next_workspace(workspaces):
+    return next(i for i in range(1, 100) if not [ws for ws in workspaces if ws['id'] == i])
+
+# Get command-line arguments
+args = sys.argv[1:]
+action = args[0] if args else "goto"
+
+# Get the current workspaces
+workspaces = get_workspaces()
+
+# Get the next available workspace number
+next_num = get_next_workspace(workspaces)
+
+# Perform the action based on the command-line argument
+if action == "goto":
+    subprocess.call(['hyprctl', 'dispatch', 'workspace', str(next_num)])
+elif action == "move":
+    subprocess.call(['hyprctl', 'dispatch', 'movetoworkspacesilent', str(next_num)])
+elif action == "move-and-goto":
+    subprocess.call(['hyprctl', 'keyword', 'animations:enabled', '0'])
+    subprocess.call(['hyprctl', 'dispatch', 'movetoworkspace', str(next_num)])
+    subprocess.call(['hyprctl', 'keyword', 'animations:enabled', '1'])
+else:
+    print("Invalid action: %s" % action)
+    sys.exit(1)

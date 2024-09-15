@@ -1,0 +1,19 @@
+#! /bin/bash
+
+repeatTimes=6
+
+text=${1:-"Warning"}
+
+function show-popup() {
+    kdialog --imgbox "$HOME/Pictures/symbolic/182_warning_notice_error-1024.png" --title "$text" &
+    pid=$!
+    sleep 1
+    kill $pid
+    sleep 0.5
+}
+
+for i in $(seq 1 $repeatTimes); do
+    show-popup
+done
+
+

@@ -1,0 +1,118 @@
+#!/usr/bin/env python3
+
+import json
+import sys
+
+
+def get_type(data):
+    if isinstance(data, (int, float)):
+        return "numeric"
+    else:
+        return type(data).__name__
+
+def identifier_score(key):
+    lower_key = key.lower()
+    if lower_key == "id":
+        return 0
+    elif key.endswith("Id"):
+        return 1
+    elif lower_key.endswith("_id"):
+        return 2
+    elif lower_key == "key":
+        return 10
+    elif key.endswith("Key"):
+        return 11
+    elif lower_key.endswith("_key"):
+        return 12
+    elif lower_key == "name":
+        return 20
+    elif key.endswith("Name"):
+        return 21
+    elif lower_key.endswith("_name"):
+        return 22
+    elif lower_key.endswith("id"):
+        return 501
+    elif lower_key.endswith("key"):
+        return 502
+    elif lower_key.endswith("name"):
+        return 503
+    elif lower_key == "priority":
+        return 700
+    else:
+        return 999
+
+def determine_identifier(data):
+    if not data or not isinstance(data[0], dict):
+        return None
+
+    # Create a map of potential identifiers
+    id_map = {}
+    first_element = data[0]
+    
+    for key, value in first_element.items():
+        type_value = get_type(value)
+        if type_value != "dict" and type_value != "list":
+            id_map[key] = { "type": get_type(value), "const": value }
+
+    # Check remaining elements for compatibility
+    for element in data[1:]:
+        for key in list(id_map.keys()):
+            if key not in element or get_type(element[key]) != id_map[key]["type"]:
+                del id_map[key]
+            elif "const" in id_map[key] and element[key] != id_map[key]["const"]:
+                del id_map[key]["const"]
+
+    # We are not interested in constant values
+    for key in list(id_map.keys()):
+        if "const" in id_map[key]:
+            del id_map[key]
+
+    if id_map:
+        return sorted(id_map.keys(), key=identifier_score)[0]
+    return None
+
+def sort_dicts(data):
+    identifier = determine_identifier(data)
+    if identifier is None:
+        return data
+    return sorted(data, key=lambda x: x[identifier])
+
+def sort_json(data):
+    if isinstance(data, dict):
+        return {key: sort_json(value) for key, value in sorted(data.items())}
+    elif isinstance(data, list):
+        # Sort list elements
+        for key, element in enumerate(data):
+            data[key] = sort_json(element)
+        # Separate elements by type for sorting
+        num_elements = sorted([e for e in data if isinstance(e, (int, float))])
+        str_elements = sorted([e for e in data if isinstance(e, str)])
+        dict_elements = sort_dicts([e for e in data if isinstance(e, dict)])
+        other_elements = [e for e in data if not isinstance(e, (int, float, str, dict))]
+        # Combine sorted elements
+        return num_elements + str_elements + dict_elements + other_elements
+    else:
+        return data
+
+def main(input_file, output_file=None):
+    with open(input_file, 'r', encoding="utf-8") as f:
+        data = json.load(f)
+
+    sorted_data = sort_json(data)
+
+    if output_file is None:
+        output_file = input_file
+
+    with open(output_file, 'w', encoding="utf-8") as f:
+        json.dump(sorted_data, f, indent=4)
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Sort a JSON file alphabetically without respecting the array order.")
+        print("This is useful for diffing JSON files where the order of elements is not important.\n")
+        print("Usage: sort-json <input_file> [output_file]")
+        print("  - If output_file is not provided, the input file will be overwritten.")
+    else:
+        input_file = sys.argv[1]
+        output_file = sys.argv[2] if len(sys.argv) > 2 else None
+        main(input_file, output_file)

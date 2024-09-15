@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Get the focused window type using Hyprland's `activewindow` command
+focused_window_json=$(hyprctl activewindow -j)
+
+if [ "$focused_window_json" = "{}" ]; then
+    # No window is focused, switch to the next workspace
+    focused_monitor=$(hyprctl monitors -j | jq -r '.[] | select(.focused==true).name')
+    focused_workspace=$(hyprctl monitors -j | jq -r '.[] | select(.focused==true).activeWorkspace.id')
+    workspaces_in_monitor=$(hyprctl workspaces -j | jq -r --arg MON "$focused_monitor" '[.[] | select(.monitor == $MON)]')
+    workspace_count_in_monitor=$(echo "$workspaces_in_monitor" | jq length)
+
+    if [ "$workspace_count_in_monitor" -eq 1 ]; then
+        # We are on the last workspace of this monitor, allow switching to other monitors
+        workspaces_in_monitor=$(hyprctl workspaces -j)
+    fi
+
+    # Filter out the focused workspace and get the first workspace in the list
+    workspaces_in_monitor=$(echo "$workspaces_in_monitor" | jq "[.[] | select(.id != $focused_workspace)]")
+    first_workspace_in_monitor=$(echo "$workspaces_in_monitor" | jq -r '.[0].id')
+
+    hyprctl dispatch workspace "$first_workspace_in_monitor"
+else
+    # A window is focused, close the focused window
+    hyprctl dispatch killactive
+fi

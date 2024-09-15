@@ -1,0 +1,13 @@
+#!/bin/bash
+
+SELECTED_EMOJI=$(rofimoji --action print)
+
+if [ -z "$SELECTED_EMOJI" ]; then
+    exit 0
+fi
+
+wl-copy "$SELECTED_EMOJI"
+sleep 0.01
+
+# Send Ctrl+V to the focused window
+ydotool key 29:1 47:1 47:0 29:0

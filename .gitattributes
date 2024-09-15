@@ -1,0 +1,2 @@
+dot-gitconfig filter=git-crypt diff=git-crypt
+dot-netextender filter=git-crypt diff=git-crypt

@@ -1,0 +1,31 @@
+configuration {
+
+  hover-select: false;
+
+  /* Disable MousePrimary as an entry selector */
+  /* Without this setting you won't be able to set MousePrimary as an entry
+     acceptor. */
+  me-select-entry: "";
+  kb-accept-entry: "Return";
+  kb-accept-alt: "Ctrl+Return";
+  kb-accept-custom: "Alt+Return";
+
+  /* Use either LMB single click or RMB single click or LMB double click
+     to accept an entry */
+  me-accept-entry: [ MousePrimary, MouseSecondary, MouseDPrimary ];
+
+  show-icons: true;
+
+  combi-modes: ["drun", "window", "run"];
+  display-combi: "";
+  display-window: "";
+  display-drun: "";
+  display-run: ">";
+  display-filebrowser: "";
+
+  window-format: "* {c} | {t}";
+
+  window-match-fields: ["title", "app-id"];
+
+}
+@theme ".config/rofi/theme.rasi"
