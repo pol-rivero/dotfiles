@@ -3,6 +3,12 @@
 This directory contains configuration files that I wasn't able to automate.  
 If you don't have the `dotfiles.key` file, some files will be encrypted and most steps below probably won't be useful to you.
 
+## Skip prompts in `yay`
+
+```bash
+yay --save --answerdiff None --answerclean None --removemake
+```
+
 ## GUFW (Firewall GUI)
 
 1. Modify `/usr/share/applications/gufw.desktop` and replace `Exec=gufw` with:

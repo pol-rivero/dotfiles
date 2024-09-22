@@ -25,8 +25,9 @@ yay -S --needed $(cat ~/.local/share/dotfiles/packages)
 3. Start services:
 
 ```bash
-systemctl enable --now ufw.service # Firewall
-systemctl enable --now ydotool.service # To allow pasting from copyq and rofimoji
+systemctl enable --now ufw.service      # Firewall
+systemctl enable --now ydotool.service  # Allow pasting from copyq and rofimoji
+systemctl enable --now cronie.service   # Cron jobs
 ```
 
 4. [Manually apply other configurations](manual-config/README.md)

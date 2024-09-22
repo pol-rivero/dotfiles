@@ -1,0 +1,8 @@
+# Edit crontab with `crontab -e`
+
+# min hour day_of_month month day_of_week command
+# See https://crontab.guru
+
+# Run every 3 hours
+0 */3 * * * bin/crons/automate-mail-zip/run.py
+
