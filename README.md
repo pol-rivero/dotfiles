@@ -13,8 +13,8 @@ stow --dotfiles -t ~ .
 ## Usage
 
 ```bash
-stow-apply   # Update symlinks
-stow-remove  # Remove symlinks
+dotfiles-apply   # Update symlinks
+dotfiles-remove  # Remove symlinks
 ```
 
 ## References

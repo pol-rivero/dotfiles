@@ -2,7 +2,7 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="macovsky"
+ZSH_THEME="mytheme"
 
 HYPHEN_INSENSITIVE="true"
 # ENABLE_CORRECTION="true"
@@ -40,11 +40,12 @@ find() {
 }
 
 DOTFILES_DIR="$HOME/.local/share/dotfiles"
-stow-apply() {
-  (cd $DOTFILES_DIR && stow --dotfiles -t $HOME .)
-}
-stow-remove() {
+dotfiles-remove() {
   (cd $DOTFILES_DIR && stow --dotfiles -D -t $HOME .)
+}
+dotfiles-apply() {
+  dotfiles-remove
+  (cd $DOTFILES_DIR && stow --dotfiles -t $HOME .)
 }
 
 

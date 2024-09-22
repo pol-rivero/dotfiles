@@ -1,11 +1,10 @@
 #! /bin/bash
 
 repeatTimes=6
-
-text=${1:-"Warning"}
+windowSize="900x900"
 
 function show-popup() {
-    kdialog --imgbox "$HOME/Pictures/symbolic/182_warning_notice_error-1024.png" --title "$text" &
+    yad --picture --filename "$HOME/bin/images/warning.png" --size fit --title "Warning" --no-buttons --geometry=$windowSize &
     pid=$!
     sleep 1
     kill $pid
