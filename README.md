@@ -10,6 +10,13 @@ git-crypt unlock /path/to/dotfiles.key
 stow --dotfiles -t ~ .
 ```
 
+Start services:
+
+```bash
+systemctl enable --now ufw.service # Firewall
+systemctl enable --now ydotool.service # To allow pasting from copyq and rofimoji
+```
+
 ## Usage
 
 ```bash
