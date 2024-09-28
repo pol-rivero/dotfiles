@@ -22,7 +22,7 @@ export SONARLINT_USER_HOME="$HOME/.cache/sonarlint"
 source $ZSH/oh-my-zsh.sh
 
 lazy_load_nvm() {
-    unset -f node nvm
+    unset -f node nvm npm
     export NVM_DIR="$HOME/.config/nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 }
@@ -32,7 +32,11 @@ node() {
 }
 nvm() {
   lazy_load_nvm
-  node $@
+  nvm $@
+}
+npm() {
+  lazy_load_nvm
+  npm $@
 }
 
 find() {
