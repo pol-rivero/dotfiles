@@ -28,3 +28,8 @@ Append the contents of [hosts](hosts) to `/etc/hosts`.
 ## Redis connections
 
 Open RedisInsight and click import (next to "Add Redis database"). Select [redis-connections.json](redis-connections.json).
+
+## Epson scanner over network
+
+1. Install `sane`, `imagescan` and `imagescan-plugin-networkscan`.
+2. Create the file `/etc/utsushi/utsushi.conf` with [this content](utsushi.conf) (may need to change the model and IP)
