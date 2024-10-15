@@ -1,0 +1,9 @@
+
+// Rofi theme colors
+
+* {
+    accent-color:                rgba ( 35, 200, 250, 1 );
+    selected-item:               rgba ( 32, 81, 113, 1 );
+    foreground:                  rgba ( 255, 255, 255, 1 );
+    window-background:           rgba ( 27, 27, 27, 0.75 );
+}

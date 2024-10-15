@@ -1,7 +1,7 @@
 {
   "id": "General",
-  "lastKnownVersion": "1.44.4",
-  "highestInstalledVersion": "1.44.4",
+  "lastKnownVersion": "1.44.5",
+  "highestInstalledVersion": "1.44.5",
   "showedNetworkOptIn": true,
   "theme": "LIGHT",
   "telemetryAnonymousId": "918fb12f-b3f3-4177-8a0e-ed63b11eed13",
@@ -37,6 +37,7 @@
   "enableMultipleConnectionSystem": true,
   "proxy": "",
   "enableCreatingNewConnections": true,
+  "enableGlobalWrites": false,
   "showDevFeatureFlags": false,
   "enableOidc": false,
   "newExplainPlan": false,

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=MongoDB Compass
+Comment=The MongoDB GUI
+GenericName=MongoDB Compass
+Icon=mongodb-compass
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;Utility;
+MimeType=x-scheme-handler/mongodb;x-scheme-handler/mongodb+srv;
+
+# https://github.com/mongodb-js/compass/issues/1911#issuecomment-2217578789
+Exec=env MONGODB_COMPASS_TEST_LOG_DIR=/dev/null mongodb-compass --ignore-additional-command-line-flags --password-store="gnome-libsecret"

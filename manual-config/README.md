@@ -9,13 +9,9 @@ If you don't have the `dotfiles.key` file, some files will be encrypted and most
 yay --save --answerdiff None --answerclean None --removemake
 ```
 
-## GUFW (Firewall GUI)
+## GUFW (Firewall GUI) profile
 
-1. Modify `/usr/share/applications/gufw.desktop` and replace `Exec=gufw` with:
-
-   `Exec=sh -c "xhost +si:localuser:root && gufw && xhost -si:localuser:root"`
-
-2. (Optional) Launch gufw and select File > Import profile. Select [Office.profile](Office.profile). In the Profile dropdown, select Office.
+Launch gufw and select File > Import profile. Select [Office.profile](Office.profile). In the Profile dropdown, select Office.
 
 ## Header editor (extension)
 

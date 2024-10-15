@@ -1,0 +1,32 @@
+
+/* SwayNotificationCenter theme colors */
+
+@define-color foreground rgba ( 255, 255, 255, 1 );
+@define-color urgent-text rgba ( 252, 200, 194, 1 );
+
+@define-color card-background rgba ( 22, 22, 22, 1 );
+@define-color window-background rgba ( 27, 27, 27, 0.75 );
+
+@define-color accent-color rgba ( 35, 200, 250, 1 );
+@define-color selected-item rgba ( 32, 81, 113, 1 );
+
+
+
+
+@define-color color0 #43122c;
+@define-color color1 #D9BE12;
+@define-color color2 #FFB001;
+@define-color color3 #CEB236;
+@define-color color4 #3A769D;
+@define-color color5 #51758E;
+@define-color color6 #5C94A1;
+@define-color color7 #aacecc;
+@define-color color8 #76908e;
+@define-color color9 #D9BE12;
+@define-color color10 #FFB001;
+@define-color color11 #CEB236;
+@define-color color12 #3A769D;
+@define-color color13 #51758E;
+@define-color color14 #5C94A1;
+@define-color color15 #aacecc;
+ 
