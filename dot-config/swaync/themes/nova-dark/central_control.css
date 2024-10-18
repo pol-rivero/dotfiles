@@ -239,12 +239,3 @@ progressbar {
     font-weight: 500;
     font-size: 0.8rem;
 }
-
-/* Volume */
-.widget-volume {
-  background: @card-background-sec;
-  color: @card-background;
-  padding: 4px;
-  margin: 6px;
-  border-radius: 6px;
-}

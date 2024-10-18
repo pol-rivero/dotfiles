@@ -5,11 +5,11 @@
 	"cssPriority": "user",
 
   "control-center-width": 450,
-  "control-center-height": 1000, 
   "control-center-margin-top": 2,
   "control-center-margin-bottom": 2,
   "control-center-margin-right": 1,
   "control-center-margin-left": 0,
+  "fit-to-screen": true,
 
   "notification-window-width": 400,
   "notification-icon-size": 48,
@@ -18,19 +18,21 @@
 
   "timeout": 4,
   "timeout-low": 2,
-  "timeout-critical": 6,
+  "timeout-critical": 10,
   
-  "fit-to-screen": false,
-  "keyboard-shortcuts": true,
+  "notification-2fa-action": false,
   "image-visibility": "when-available",
+  "keyboard-shortcuts": true,
   "transition-time": 200,
-  "hide-on-clear": false,
+  "hide-on-clear": true,
   "hide-on-action": false,
+
   "script-fail-notify": true,
   "scripts": {
     "example-script": {
-      "exec": "echo 'Do something...'",
-      "urgency": "Normal"
+      "exec": "notify-send 'received notification'",
+      "body": "Example script",
+      "urgency": "Critical"
     }
   },
   "notification-visibility": {
@@ -42,7 +44,6 @@
   },
   "widgets": [
     "label",
-    "buttons-grid",
     "mpris",
     "title",
     "dnd",
@@ -64,35 +65,6 @@
     "mpris": {
       "image-size": 96,
       "image-radius": 12
-    },
-    "volume": {
-      "label": "󰕾",
-        "show-per-app": true
-    },
-    "buttons-grid": {
-      "actions": [
-        {
-          "label": " ",
-          "command": "amixer set Master toggle"
-        },
-        {
-          "label": "",
-          "command": "amixer set Capture toggle"
-        },
-        {
-          "label": "",
-          "command": "nm-connection-editor"
-        },
-        {
-          "label": "󰂯",
-          "command": "blueman-manager"
-        },
-        {
-          "label": "󰏘",
-          "command": "nwg-look"
-        }
-        
-      ]
     }
   }
 }
