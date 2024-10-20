@@ -14,7 +14,8 @@
             "memory",
             "cpu",
             "clock",
-            "custom/power"
+            "custom/reboot",
+            "custom/shutdown"
         ]
     },
     {
