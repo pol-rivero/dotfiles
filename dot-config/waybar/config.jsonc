@@ -10,10 +10,14 @@
         "include": ["~/.config/waybar/common-config.jsonc"],
         "output": "DP-2",
         "modules-right": [
+            "custom/gmail",
             "custom/vpn",
+            "custom/separator",
             "memory",
             "cpu",
+            "custom/separator",
             "clock",
+            "custom/separator",
             "custom/reboot",
             "custom/shutdown"
         ]
@@ -23,10 +27,13 @@
         "output": "DP-3",
         "modules-right": [
             "idle_inhibitor",
+            "custom/separator",
             "pulseaudio",
             "network",
-            "tray",
-            "clock"
+            "custom/separator",
+            "clock",
+            "custom/separator",
+            "tray"
         ]
     }
 ]

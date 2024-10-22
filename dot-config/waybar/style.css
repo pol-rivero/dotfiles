@@ -1,49 +1,4 @@
-/* * {
-    border: none;
-    border-radius: 0;
-    font-family: "Intel One Mono", "Font Awesome 6 Free", "Font Awesome 6 Brands", "Cantarell", "Noto Color Emoji";
-    font-size: 14px;
-    min-height: 0;
-} */
-
-/* =============================================================================
- *
- * Waybar configuration
- *
- * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
- *
- * =========================================================================== */
-
-/* -----------------------------------------------------------------------------
- * Keyframes
- * -------------------------------------------------------------------------- */
-
- @keyframes blink-warning {
-    70% {
-        color: white;
-    }
-
-    to {
-        color: white;
-        background-color: orange;
-    }
-}
-
-@keyframes blink-critical {
-    70% {
-      color: white;
-    }
-
-    to {
-        color: white;
-        background-color: red;
-    }
-}
-
-
-/* -----------------------------------------------------------------------------
- * Base styles
- * -------------------------------------------------------------------------- */
+@import '../hypr/theme/colors.css';
 
 /* Reset all styles */
 * {
@@ -54,150 +9,157 @@
     padding: 0;
 }
 
-/* The whole bar */
-#waybar {
-    background: #323232;
-    color: white;
+
+window#waybar {
+    background-color: rgba(0,0,0,0.3);
     font-family: "Intel One Mono";
-    font-size: 14px;
+    color: #fdfdfd;
+    transition-property: background-color;
+    transition-duration: .2s;
 }
 
-/* Each module */
+window#waybar.hidden {
+    opacity: 0.1;
+}
+
+window#waybar.empty {
+    background-color: transparent;
+}
+
+window#waybar.empty #window {
+    padding: 0px;
+    border: 0px;
+    background-color: transparent;
+}
+
+/* PADDING */
+
+#backlight,
+#backlight-slider,
 #battery,
+#bluetooth,
 #clock,
 #cpu,
-#custom-keyboard-layout,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
 #memory,
 #mode,
+#mpris,
 #network,
 #pulseaudio,
+#pulseaudio-slider,
+#taskbar,
 #temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-shutdown,
+#custom-reboot {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+#custom-shutdown,
+#custom-gmail,
 #tray {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-
-/* -----------------------------------------------------------------------------
- * Module styles
- * -------------------------------------------------------------------------- */
-
-#battery {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#battery.warning {
-    color: orange;
-}
-
-#battery.critical {
-    color: red;
-}
-
-#battery.warning.discharging {
-    animation-name: blink-warning;
-    animation-duration: 3s;
-}
-
-#battery.critical.discharging {
-    animation-name: blink-critical;
-    animation-duration: 2s;
-}
-
-#clock {
-    font-weight: bold;
-}
-
-#cpu {
-  /* No styles */
-}
-
-#cpu.warning {
-    color: orange;
-}
-
-#cpu.critical {
-    color: red;
-}
-
-#memory {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#memory.warning {
-    color: orange;
-}
-
-#memory.critical {
-    color: red;
-    animation-name: blink-critical;
-    animation-duration: 2s;
-}
-
-#mode {
-    background: #64727D;
-    border-top: 2px solid white;
-    /* To compensate for the top border and still have vertical centering */
-    padding-bottom: 2px;
-}
-
-#network {
-    /* No styles */
-}
-
-#network.disconnected {
-    color: orange;
-}
-
-#pulseaudio {
-    /* No styles */
-}
-
-#pulseaudio.muted {
-    /* No styles */
-}
-
-#custom-spotify {
-    color: rgb(102, 220, 105);
-}
-
-#temperature {
-    /* No styles */
-}
-
-#temperature.critical {
-    color: red;
-}
-
-#tray {
-    /* No styles */
+    padding-right: 12px;
 }
 
 #window {
-    font-family: Cantarell;
+    /* Compensate for keyboard indicator */
+	padding-left: 22px;
+    font-family: "Cantarell";
     font-weight: bold;
 }
 
+tooltip {
+    background: #212121;
+    border-radius: 4px;
+}
+
+tooltip label{
+    padding: 4px;
+}
+
+/* TASKBAR */
+
+#taskbar button {
+    border-radius: 10px;
+}
+#taskbar button.active {
+    background-color: rgba(255,255,255,0.3);
+    padding-left: 12px;
+    padding-right: 12px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+#taskbar button:hover {
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
 #workspaces button {
-    border-top: 2px solid transparent;
-    /* To compensate for the top border and still have vertical centering */
-    padding-bottom: 2px;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: white;
+    background-color: transparent;
+    color: #ffffff;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0px;
+    border-radius: 9px;
+    padding-left: 4px;
+    padding-right: 4px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
-
-#workspaces button.focused {
-    border-color: #4c7899;
-    color: white;
-    background-color: #285577;
+#workspaces button.active {
+    background-color: transparent;
+    color: @accent-color;
+    padding-left: 8px;
+    padding-right: 8px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
-
+#workspaces button:hover {
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
 #workspaces button.urgent {
-    border-color: #c9545d;
-    color: #c9545d;
+    background-color: #eb4d4b;
+}
+
+/* COLOR */
+
+#clock {
+    color: @accent-color;
+    font-weight: bold;
+}
+
+
+#custom-separator {
+    color: #606060;
+}
+
+#idle_inhibitor.activated {
+    background-color: @accent-color;
+    color: black;
+}
+
+#keyboard-state .capslock.locked {
+    background-color: @accent-color;
+    color: black;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#custom-gmail.unread {
+    color: @accent-color;
+}
+#custom-gmail.inaccurate {
+    color: #606060;
+}
+#custom-gmail.error {
+    color: darkred;
 }

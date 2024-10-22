@@ -42,7 +42,7 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "<span background='#FFC107' foreground='black'>  SLEEP DISABLED </span>",
+            "activated": " SLEEP DISABLED",
             "deactivated": ""
         }
     },
@@ -52,17 +52,16 @@
             "capslock":"{icon}"
         }, 
         "format-icons": {
-            "locked": "<span background='#FFC107' foreground='black'> CAPS LOCK </span>",
+            "locked": "CAPS LOCK",
             "unlocked": ""
         }
     },
     "tray": {
-        // "icon-size": 21,
         "spacing": 10
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "on-click": "gnome-calendar"
     },
     "cpu": {
         "format": " {usage}%",
@@ -96,14 +95,14 @@
         "on-click": "pavucontrol"
     },
     "custom/shutdown": {
-        "format" : "⏻   ",
-        "tooltip": false,
-        "on-click": "notify-send shutdown now"
+        "format" : "⏻",
+        "tooltip-format": "Shutdown",
+        "on-click": "shutdown now"
     },
     "custom/reboot": {
         "format" : "",
-        "tooltip": false,
-        "on-click": "notify-send reboot"
+        "tooltip-format": "Reboot",
+        "on-click": "reboot"
     },
     "custom/vpn": {
         "format": "{}",
@@ -111,5 +110,17 @@
         "return-type": "json",
         "interval": 1,
         "on-click": "${HOME}/bin/lc toggle"
+    },
+    "custom/gmail": {
+        "exec": "bar-gmail",
+        "return-type": "json",
+        "interval": 10,
+        "tooltip": false,
+        "on-click": "xdg-open https://mail.google.com/mail/u/0/#inbox"
+    },
+    "custom/separator": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
     }
 }
