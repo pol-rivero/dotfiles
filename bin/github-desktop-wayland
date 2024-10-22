@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# If already running, focus the window manually. Github Desktop seems to fail at focusing the window on wayland.
+if pgrep -x 'github-desktop' > /dev/null; then
+    wlrctl window focus 'app_id:GitHub Desktop'
+else
+    github-desktop $@
+fi
