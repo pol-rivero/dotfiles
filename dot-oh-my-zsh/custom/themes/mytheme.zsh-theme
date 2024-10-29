@@ -1,7 +1,7 @@
 # Configuration
-SHOW_FULL_PATH=0           # 1: Full path, 0: Only current directory
-SHOW_MS_THRESHOLD=500      # Show elapsed time in ms if more than this (500ms)
-SHOW_SEC_THRESHOLD=10000   # Show elapsed time in sec if more than this (10s)
+SHOW_FULL_PATH=0        # 1: Full path, 0: Only current directory
+SHOW_MS_THRESHOLD=0.5   # Show elapsed time in ms if more than this (500ms)
+SHOW_SEC_THRESHOLD=10   # Show elapsed time in sec if more than this (10s)
 
 # Before command execution
 preexec() {
@@ -17,10 +17,10 @@ precmd() {
     return
   fi
 
-  elapsed_time_ms=$(( ($EPOCHREALTIME - $timer_start) * 1000.0 ))
+  elapsed_time=$(($EPOCHREALTIME - $timer_start))
   timer_start=""
 
-  if [ $ERROR_CODE -eq 0 ] && (( ${elapsed_time_ms%.*} < $SHOW_MS_THRESHOLD )); then
+  if [ $ERROR_CODE -eq 0 ] && (( $elapsed_time < $SHOW_MS_THRESHOLD )); then
     return
   fi
 
@@ -30,10 +30,10 @@ precmd() {
     print -n " $fg[red]$ERROR_CODE ↵$reset_color "
   fi
 
-  if (( ${elapsed_time_ms%.*} >= $SHOW_SEC_THRESHOLD )); then
-    time_sec=$(( ${elapsed_time_ms%.*} / 1000 ))
-    print -n " $fg[cyan]${time_sec}s$reset_color "
-  elif (( ${elapsed_time_ms%.*} >= $SHOW_MS_THRESHOLD )); then
+  if (( $elapsed_time >= $SHOW_SEC_THRESHOLD )); then
+    print -n " $fg[cyan]${elapsed_time%.*}s$reset_color "
+  elif (( $elapsed_time >= $SHOW_MS_THRESHOLD )); then
+    elapsed_time_ms=$(($elapsed_time * 1000))
     print -n " $fg[cyan]${elapsed_time_ms%.*}ms$reset_color "
   fi
 
