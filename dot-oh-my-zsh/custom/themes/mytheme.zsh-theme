@@ -46,11 +46,10 @@ else
   PATH_PROMPT='%c'
 fi
 
-PROMPT='%{$fg[cyan]%}${PATH_PROMPT}%{$reset_color%} %B>%b '
-RPROMPT='$(ruby_prompt_info)$(git_prompt_info)'
+PROMPT='%{$fg[cyan]%}${PATH_PROMPT}%{$reset_color%} $(ruby_prompt_info)$(git_prompt_info)%B>%b '
 
-ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[yellow]%}("
-ZSH_THEME_GIT_PROMPT_SUFFIX=")%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}("
+ZSH_THEME_GIT_PROMPT_SUFFIX=")%{$reset_color%} "
 
-ZSH_THEME_RUBY_PROMPT_PREFIX=" %{$fg[red]%}("
-ZSH_THEME_RUBY_PROMPT_SUFFIX=")%{$reset_color%}"
+ZSH_THEME_RUBY_PROMPT_PREFIX="%{$fg[red]%}("
+ZSH_THEME_RUBY_PROMPT_SUFFIX=")%{$reset_color%} "
