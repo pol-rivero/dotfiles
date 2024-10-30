@@ -12,7 +12,7 @@
 
 window#waybar {
     background-color: rgba(0,0,0,0.3);
-    font-family: "Intel One Mono";
+    font-family: "IntoneMono Nerd Font Propo";
     color: #fdfdfd;
     transition-property: background-color;
     transition-duration: .2s;
@@ -74,11 +74,6 @@ window#waybar.empty #window {
 	padding-left: 22px;
     font-family: "Cantarell";
     font-weight: bold;
-}
-
-tooltip {
-    background: #212121;
-    border-radius: 4px;
 }
 
 tooltip label{
@@ -162,4 +157,20 @@ tooltip label{
 }
 #custom-gmail.error {
     color: darkred;
+}
+
+tooltip {
+    background: @card-background;
+    border-radius: 4px;
+}
+
+#tray menu {
+    background-color: @card-background;
+    color: #fdfdfd;
+    border-radius: 4px;
+}
+
+#tray menu menuitem {
+    padding: 4px;
+    border-radius: 4px;
 }
