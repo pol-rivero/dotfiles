@@ -26,6 +26,15 @@
             "class<code>": ""
         }
     },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": {},
+        "spacing": 0,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "on-click-right": "fullscreen"
+    },
     "hyprland/window": {
         "rewrite": {
             // "(.*) — Zen Browser": "  $1"
@@ -117,6 +126,16 @@
         "interval": 10,
         "tooltip": false,
         "on-click": "xdg-open https://mail.google.com/mail/u/0/#inbox"
+    },
+    "custom/updates": {
+        "format": "{}{icon}",
+        "return-type": "json",
+        "format-icons": {
+            "has-updates": " 󱍷",
+            "updated": ""
+        },
+        "exec": "waybar-module-pacman-updates --no-zero-output",
+        "on-click": "$TERMINAL -e 'yay -Syu'"
     },
     "custom/separator": {
         "format": "|",

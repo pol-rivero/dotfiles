@@ -10,6 +10,7 @@
         "include": ["~/.config/waybar/common-config.jsonc"],
         "output": "DP-2",
         "modules-right": [
+            "custom/updates",
             "custom/gmail",
             "custom/vpn",
             "custom/separator",
