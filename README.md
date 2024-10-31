@@ -9,7 +9,7 @@ If you are not me, you (hopefully) won't have access to the `dotfiles.key` file 
 1. Clone the repository and apply the dotfiles:
 
 ```bash
-yay -S git git-crypt stow
+yay -S git git-crypt stow metapac-bin
 git clone https://github.com/p-rivero/dotfiles ~/.local/share/dotfiles
 cd ~/.local/share/dotfiles
 git-crypt unlock /path/to/dotfiles.key  # If you have the key
@@ -19,7 +19,7 @@ stow --dotfiles -t ~ .
 2. Install packages:
 
 ```bash
-yay -S --needed $(cat ~/.local/share/dotfiles/packages)
+metapac sync
 ```
 
 3. Start services:
