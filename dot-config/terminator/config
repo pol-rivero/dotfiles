@@ -19,7 +19,7 @@
     cursor_shape = ibeam
     cursor_fg_color = "#000000"
     cursor_bg_color = "#aaaaaa"
-    font = IntoneMono Nerd Font Mono Medium 12
+    font = Intel One Mono Medium 12
     foreground_color = "#fcfcfc"
     show_titlebar = False
     scrollback_lines = 2000

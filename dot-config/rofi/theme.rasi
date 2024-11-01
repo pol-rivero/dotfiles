@@ -31,7 +31,7 @@
     alternate-active-background: @active-background;
 }
 window {
-    font: "IntoneMono Nerd Font Propo Medium 14";
+    font: "Intel One Mono Medium 14";
     background-color: @window-background;
     border:           1;
     padding:          10;
