@@ -11,23 +11,13 @@
         "hyprland/window",
         "keyboard-state"
     ],
-    // Modules configuration
+
     "hyprland/workspaces": {
-        "format": "{icon}: {windows}",
-        "show-special": true,
-        "format-window-separator": "   ",
-        "window-rewrite-default": "",
-        "window-rewrite": {
-            "title<.*youtube.*>": "",
-            "class<firefox>": "",
-            "class<zen-alpha>": "",
-            "class<terminator>": "",
-            "class<zen-alpha> title<.*github.*>": "",
-            "class<code>": ""
-        }
+        "format": "{icon}",
+        "show-special": true
     },
     "wlr/taskbar": {
-        "format": "{icon}",
+        "format": "{icon} {title:.20}",
         "icon-size": {},
         "spacing": 0,
         "tooltip-format": "{title}",

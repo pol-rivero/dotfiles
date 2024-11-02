@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=MongoDB Compass
 Comment=The MongoDB GUI
-GenericName=MongoDB Compass
+GenericName=MongoDB Client
 Icon=mongodb-compass
 Type=Application
 StartupNotify=true
