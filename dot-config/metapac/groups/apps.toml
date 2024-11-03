@@ -8,7 +8,6 @@ arch = [
     "font-manager",
     "github-desktop-bin",
     "gnome-calculator",
-    "gnome-calendar",
     "gnome-disk-utility",
     "gnome-tweaks",
     "gufw",
