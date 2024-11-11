@@ -573,7 +573,10 @@
       "clock"
     ],
     "modules-right": [
-      "tray"
+      "executor-ip",
+      "executor-separator",
+      "tray",
+      "executor-separator"
     ],
     "controls-settings": {
       "components": [
@@ -761,6 +764,40 @@
       "icon-size": 18,
       "interval": 1,
       "always-show-icon": true
+    },
+    "executor-separator": {
+      "script": "echo |",
+      "tooltip-text": "",
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "separator",
+      "css-name": "",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 0,
+      "angle": 0.0,
+      "sigrt": 34,
+      "use-sigrt": false
+    },
+    "executor-ip": {
+      "script": ".config/nwg-panel/executors/ip.sh",
+      "tooltip-text": "Local IP",
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "css-name": "",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 5,
+      "angle": 0.0,
+      "sigrt": 34,
+      "use-sigrt": false
     }
   }
 ]
