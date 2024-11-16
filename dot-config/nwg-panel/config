@@ -573,6 +573,8 @@
       "clock"
     ],
     "modules-right": [
+      "executor-inhibit-idle",
+      "executor-separator",
       "executor-ip",
       "executor-separator",
       "tray",
@@ -798,6 +800,23 @@
       "angle": 0.0,
       "sigrt": 34,
       "use-sigrt": false
+    },
+    "executor-inhibit-idle": {
+      "script": ".config/nwg-panel/executors/idle_inhibitor.sh status",
+      "tooltip-text": "Prevent sleep",
+      "on-left-click": ".config/nwg-panel/executors/idle_inhibitor.sh toggle",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "css-name": "",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 0,
+      "angle": 0.0,
+      "sigrt": 34,
+      "use-sigrt": true
     }
   }
 ]
