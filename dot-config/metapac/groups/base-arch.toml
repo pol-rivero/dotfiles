@@ -15,7 +15,7 @@ arch = [
     "linux",
     "man-db",
     "man-pages",
-    "metapac-bin",
+    "metapac",
     "nano",
     "networkmanager",
     "pacman-contrib",

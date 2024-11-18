@@ -22,6 +22,12 @@ stow --dotfiles -t ~ .
 metapac sync
 ```
 
+To list the untracked packages:
+
+```bash
+metapac unmanaged
+```
+
 3. Start services:
 
 ```bash
