@@ -82,6 +82,11 @@
         }
     ],
     "sonarlint.disableTelemetry": true,
+    "sonarlint.rules": {
+        "java:S6813": {
+            "level": "off"
+        }
+    },
     "telemetry.telemetryLevel": "off",
     "terminal.integrated.scrollback": 10000,
     "terminal.integrated.tabs.location": "left",
