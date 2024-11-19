@@ -1,0 +1,135 @@
+[
+    {
+        "command": "markdown.showPreviewToSide",
+        "key": "alt+d",
+        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+        "command": "-workbench.action.closeWindow",
+        "key": "ctrl+shift+w"
+    },
+    {
+        "command": "workbench.action.navigateBack",
+        "key": "alt+left",
+        "when": "canNavigateBack"
+    },
+    {
+        "command": "workbench.action.navigateForward",
+        "key": "alt+right",
+        "when": "canNavigateForward"
+    },
+    {
+        "command": "-workbench.action.navigateBack",
+        "key": "ctrl+alt+-",
+        "when": "canNavigateBack"
+    },
+    {
+        "command": "-workbench.action.remote.showMenu",
+        "key": "ctrl+alt+o"
+    },
+    {
+        "command": "workbench.action.files.openFolder",
+        "key": "ctrl+alt+o",
+        "when": "openFolderWorkspaceSupport"
+    },
+    {
+        "command": "editor.action.transformToUppercase",
+        "key": "ctrl+alt+u"
+    },
+    {
+        "command": "workbench.action.terminal.copyAndClearSelection",
+        "key": "ctrl+c",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected"
+    },
+    {
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "key": "ctrl+d",
+        "when": "editorFocus"
+    },
+    {
+        "command": "editor.action.copyLinesDownAction",
+        "key": "ctrl+d",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "command": "workbench.action.closeEditorsInGroup",
+        "key": "ctrl+down"
+    },
+    {
+        "command": "-workbench.action.files.openFolder",
+        "key": "ctrl+k ctrl+o",
+        "when": "openFolderWorkspaceSupport"
+    },
+    {
+        "command": "-workbench.action.pinEditor",
+        "key": "ctrl+k shift+enter",
+        "when": "!activeEditorIsPinned"
+    },
+    {
+        "command": "-workbench.action.unpinEditor",
+        "key": "ctrl+k shift+enter",
+        "when": "activeEditorIsPinned"
+    },
+    {
+        "command": "-markdown.showPreviewToSide",
+        "key": "ctrl+k v",
+        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+        "command": "-workbench.action.closeEditorsInGroup",
+        "key": "ctrl+k w"
+    },
+    {
+        "command": "-workbench.action.navigateForward",
+        "key": "ctrl+shift+-",
+        "when": "canNavigateForward"
+    },
+    {
+        "command": "-editor.action.copyLinesDownAction",
+        "key": "ctrl+shift+alt+down",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "command": "java.action.showTypeHierarchy",
+        "key": "ctrl+shift+f12"
+    },
+    {
+        "command": "-workbench.action.terminal.paste",
+        "key": "ctrl+shift+v",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "command": "editor.action.transformToLowercase",
+        "key": "ctrl+u"
+    },
+    {
+        "command": "workbench.action.pinEditor",
+        "key": "ctrl+up",
+        "when": "!activeEditorIsPinned"
+    },
+    {
+        "command": "workbench.action.unpinEditor",
+        "key": "ctrl+up",
+        "when": "activeEditorIsPinned"
+    },
+    {
+        "command": "workbench.action.terminal.paste",
+        "key": "ctrl+v",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "command": "-references-view.findReferences",
+        "key": "shift+alt+f12",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "command": "references-view.findReferences",
+        "key": "shift+f12",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "key": "shift+f2",
+        "when": "editorFocus"
+    }
+]
