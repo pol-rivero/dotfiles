@@ -7,39 +7,37 @@ import sys
 def get_type(data):
     if isinstance(data, (int, float)):
         return "numeric"
-    else:
-        return type(data).__name__
+    return type(data).__name__
 
 def identifier_score(key):
     lower_key = key.lower()
     if lower_key == "id":
         return 0
-    elif key.endswith("Id"):
+    if key.endswith("Id"):
         return 1
-    elif lower_key.endswith("_id"):
+    if lower_key.endswith("_id"):
         return 2
-    elif lower_key == "key":
+    if lower_key == "key":
         return 10
-    elif key.endswith("Key"):
+    if key.endswith("Key"):
         return 11
-    elif lower_key.endswith("_key"):
+    if lower_key.endswith("_key"):
         return 12
-    elif lower_key == "name":
+    if lower_key == "name":
         return 20
-    elif key.endswith("Name"):
+    if key.endswith("Name"):
         return 21
-    elif lower_key.endswith("_name"):
+    if lower_key.endswith("_name"):
         return 22
-    elif lower_key.endswith("id"):
+    if lower_key.endswith("id"):
         return 501
-    elif lower_key.endswith("key"):
+    if lower_key.endswith("key"):
         return 502
-    elif lower_key.endswith("name"):
+    if lower_key.endswith("name"):
         return 503
-    elif lower_key == "priority":
+    if lower_key == "priority":
         return 700
-    else:
-        return 999
+    return 999
 
 def determine_identifier(data):
     if not data or not isinstance(data[0], dict):
@@ -48,7 +46,7 @@ def determine_identifier(data):
     # Create a map of potential identifiers
     id_map = {}
     first_element = data[0]
-    
+
     for key, value in first_element.items():
         type_value = get_type(value)
         if type_value != "dict" and type_value != "list":
@@ -80,7 +78,7 @@ def sort_dicts(data):
 def sort_json(data):
     if isinstance(data, dict):
         return {key: sort_json(value) for key, value in sorted(data.items())}
-    elif isinstance(data, list):
+    if isinstance(data, list):
         # Sort list elements
         for key, element in enumerate(data):
             data[key] = sort_json(element)
@@ -91,8 +89,7 @@ def sort_json(data):
         other_elements = [e for e in data if not isinstance(e, (int, float, str, dict))]
         # Combine sorted elements
         return num_elements + str_elements + dict_elements + other_elements
-    else:
-        return data
+    return data
 
 def main(input_file, output_file=None):
     with open(input_file, 'r', encoding="utf-8") as f:

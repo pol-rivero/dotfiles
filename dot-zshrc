@@ -77,5 +77,13 @@ alias zshreload="source ~/.zshrc"
 alias cat="bat"
 alias cdesk="cd ~/Desktop"
 
+$sync_projects="$HOME/bin/hooks/sync-projects"
+alias regenerate-front="$sync_projects/flyway e2e.sh"
+alias regenerate-back="$sync_projects/flyway e2eBack.sh"
+alias regenerate-db="$sync_projects/flyway regenerateDB.sh"
+alias populate-front="$sync_projects/flyway simpleE2e.sh"
+alias populate-back="$sync_projects/flyway simpleBackE2e.sh"
+alias truncate-tenant="$sync_projects/truncate"
+
 export LC_DEV_CONFIG_PATH="$HOME/.config/LCBeyond"
 export LC_ENV="108"

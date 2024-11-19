@@ -1,1 +1,2 @@
 lc-commit/** filter=git-crypt diff=git-crypt
+sync-projects/** filter=git-crypt diff=git-crypt
