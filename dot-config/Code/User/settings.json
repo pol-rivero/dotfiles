@@ -8,6 +8,7 @@
     "debug.inlineValues": "off",
     "debug.javascript.autoAttachFilter": "disabled",
     "debug.onTaskErrors": "abort",
+    "diffEditor.hideUnchangedRegions.enabled": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.codeActionsOnSave": {
         "source.organizeImports": "explicit"
@@ -88,11 +89,11 @@
     "update.showReleaseNotes": false,
     "window.confirmSaveUntitledWorkspace": false,
     "window.dialogStyle": "custom",
+    "window.newWindowProfile": "Default",
     "workbench.editor.decorations.badges": false,
     "workbench.editor.decorations.colors": false,
     "workbench.editor.preventPinnedEditorClose": "keyboard",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.list.smoothScrolling": true,
-    "workbench.startupEditor": "none",
-    "diffEditor.hideUnchangedRegions.enabled": true
+    "workbench.startupEditor": "none"
 }
