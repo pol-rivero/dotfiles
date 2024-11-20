@@ -10,7 +10,7 @@ If you are not me, you (hopefully) won't have access to the `dotfiles.key` file 
 
 ```bash
 yay -S git git-crypt stow metapac
-git clone https://github.com/p-rivero/dotfiles ~/.local/share/dotfiles
+git clone https://github.com/pol-rivero/dotfiles ~/.local/share/dotfiles
 cd ~/.local/share/dotfiles
 git-crypt unlock /path/to/dotfiles.key  # If you have the key
 stow --dotfiles -t ~ .
