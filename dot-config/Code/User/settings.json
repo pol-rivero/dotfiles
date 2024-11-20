@@ -85,6 +85,9 @@
     "sonarlint.rules": {
         "java:S6813": {
             "level": "off"
+        },
+        "java:S2479": {
+            "level": "off"
         }
     },
     "telemetry.telemetryLevel": "off",
