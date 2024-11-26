@@ -88,6 +88,9 @@
         },
         "java:S2479": {
             "level": "off"
+        },
+        "java:S1874": {
+            "level": "off"
         }
     },
     "telemetry.telemetryLevel": "off",
