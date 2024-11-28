@@ -3,6 +3,22 @@ SHOW_FULL_PATH=0        # 1: Full path, 0: Only current directory
 SHOW_MS_THRESHOLD=0.5   # Show elapsed time in ms if more than this (500ms)
 SHOW_SEC_THRESHOLD=10   # Show elapsed time in sec if more than this (10s)
 
+format_elapsed_time() {
+  local elapsed=$1
+  local hours=$((elapsed / 3600))
+  local minutes=$(( (elapsed % 3600) / 60 ))
+  local seconds=$((elapsed % 60))
+
+  local formatted=""
+  if ((hours > 0)); then
+    formatted="${formatted}${hours}h "
+  fi
+  if ((minutes > 0 || hours > 0)); then
+    formatted="${formatted}${minutes}m "
+  fi
+  echo "${formatted}${seconds}s"
+}
+
 # Before command execution
 preexec() {
   timer_start=$EPOCHREALTIME
@@ -31,7 +47,8 @@ precmd() {
   fi
 
   if (( $elapsed_time >= $SHOW_SEC_THRESHOLD )); then
-    print -n " $fg[cyan]${elapsed_time%.*}s$reset_color "
+    formatted_time=$(format_elapsed_time ${elapsed_time%.*})
+    print -n " $fg[cyan]$formatted_time$reset_color "
   elif (( $elapsed_time >= $SHOW_MS_THRESHOLD )); then
     elapsed_time_ms=$(($elapsed_time * 1000))
     print -n " $fg[cyan]${elapsed_time_ms%.*}ms$reset_color "

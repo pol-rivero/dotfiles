@@ -83,16 +83,17 @@
     ],
     "sonarlint.disableTelemetry": true,
     "sonarlint.rules": {
-        "java:S6813": {
+        "java:S1874": {
             "level": "off"
         },
         "java:S2479": {
             "level": "off"
         },
-        "java:S1874": {
+        "java:S6813": {
             "level": "off"
         }
     },
+    "supermaven.allowGitignore": true,
     "telemetry.telemetryLevel": "off",
     "terminal.integrated.scrollback": 10000,
     "terminal.integrated.tabs.location": "left",
