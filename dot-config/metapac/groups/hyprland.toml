@@ -1,5 +1,6 @@
 arch = [
     "bar-gmail",
+    "bibata-cursor-theme-bin",
     "cliphist",
     "copyq",
     "gnome-keyring",
@@ -26,6 +27,7 @@ arch = [
     "rofi-wayland",
     "rofimoji-git",
     "sddm",
+    "slurp",
     "swaync",
     "terminator",
     "ttf-intel-one-mono",

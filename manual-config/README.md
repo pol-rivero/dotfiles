@@ -3,6 +3,19 @@
 This directory contains configuration files that I wasn't able to automate.  
 If you don't have the `dotfiles.key` file, some files will be encrypted and most steps below probably won't be useful to you.
 
+## ZSH + OMZ
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+## SDDM Autologin
+
+```
+sudo mkdir /etc/sddm.conf.d
+sudo cp ./sddm_autologin.conf /etc/sddm.conf.d/autologin.conf
+```
+
 ## Link `.vscode` directories
 
 ```bash
@@ -12,7 +25,7 @@ link-contents ~/.config/Code/vscode-dirs/[...] .vscode
 
 ## GUFW (Firewall GUI) profile
 
-Launch gufw and select File > Import profile. Select [Office.profile](Office.profile). In the Profile dropdown, select Office.
+Launch gufw and select File > Import profile. Select [LC.profile](LC.profile). In the Profile dropdown, select Office.
 
 ## Header editor (extension)
 

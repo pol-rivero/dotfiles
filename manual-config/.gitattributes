@@ -1,4 +1,4 @@
 header-editor.json filter=git-crypt diff=git-crypt
 hosts filter=git-crypt diff=git-crypt
-Office.profile filter=git-crypt diff=git-crypt
+LC.profile filter=git-crypt diff=git-crypt
 redis-connections.json filter=git-crypt diff=git-crypt
