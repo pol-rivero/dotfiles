@@ -1,9 +1,7 @@
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
 
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="mytheme"
-
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
@@ -24,29 +22,7 @@ export SONARLINT_USER_HOME="$HOME/.cache/sonarlint"
 
 source $ZSH/oh-my-zsh.sh
 
-lazy_load_nvm() {
-  if [ -z "$NVM_DIR" ]; then
-    unset -f node nvm npm npx
-    export NVM_DIR="$HOME/.config/nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  fi
-}
-node() {
-  lazy_load_nvm
-  node $@
-}
-nvm() {
-  lazy_load_nvm
-  nvm $@
-}
-npm() {
-  lazy_load_nvm
-  npm $@
-}
-npx() {
-  lazy_load_nvm
-  npx $@
-}
+eval "`fnm env`"
 
 find() {
   command find "$@" 2> >(grep -v 'Permission denied' >&2)

@@ -95,6 +95,7 @@
     },
     "supermaven.allowGitignore": true,
     "telemetry.telemetryLevel": "off",
+    "terminal.integrated.defaultProfile.linux": "zsh",
     "terminal.integrated.scrollback": 10000,
     "terminal.integrated.tabs.location": "left",
     "testing.openTesting": "neverOpen",

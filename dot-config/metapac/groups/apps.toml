@@ -5,6 +5,7 @@ arch = [
     "discord",
     "file-roller",
     "firefox",
+    "fnm-bin",
     "font-manager",
     "github-desktop-bin",
     "gnome-calculator",
