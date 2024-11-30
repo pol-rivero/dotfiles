@@ -83,6 +83,9 @@
     ],
     "sonarlint.disableTelemetry": true,
     "sonarlint.rules": {
+        "java:S106": {
+            "level": "off"
+        },
         "java:S1874": {
             "level": "off"
         },

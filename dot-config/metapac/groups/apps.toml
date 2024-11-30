@@ -13,6 +13,7 @@ arch = [
     "gnome-calculator",
     "gnome-disk-utility",
     "gnome-tweaks",
+    "grub-customizer",
     "gufw",
     "htop",
     "imagemagick",
