@@ -53,6 +53,12 @@ link-contents ~/.config/Code/vscode-dirs/[...] .vscode
 
 Launch gufw and select File > Import profile. Select [LC.profile](LC.profile). In the Profile dropdown, select Office.
 
+Also run this command to allow the VPN to work:
+
+```bash
+sudo chmod u+s /usr/sbin/pppd
+```
+
 ## Header editor (extension)
 
 Go to "Export and Import" > "Import" and select [header-editor.json](header-editor.json).

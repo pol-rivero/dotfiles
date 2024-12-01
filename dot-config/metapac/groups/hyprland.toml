@@ -27,6 +27,7 @@ arch = [
     "sddm",
     "slurp",
     "swaync",
+    "tela-icon-theme-bin",
     "terminator",
     "ttf-intel-one-mono",
     "ttf-nerd-fonts-symbols",
