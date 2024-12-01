@@ -9,4 +9,4 @@ Icon=github-desktop
 Categories=Development;
 MimeType=x-scheme-handler/x-github-client;x-scheme-handler/x-github-desktop-auth;x-scheme-handler/x-github-desktop-dev-auth;
 
-Exec=sh -c '$HOME/bin/github-desktop-wayland'
+Exec=sh -c '$HOME/bin/github-desktop-wayland "%U"'

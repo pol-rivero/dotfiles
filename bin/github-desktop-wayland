@@ -1,8 +1,15 @@
 #!/bin/sh
 
+ARGS="$@"
+
+# If args contain the auth, pass it to the app
+if echo $ARGS | grep -q 'x-github-desktop-dev-auth'; then
+    exec github-desktop $ARGS
+fi
+
 # If already running, focus the window manually. Github Desktop seems to fail at focusing the window on wayland.
 if pgrep -x 'github-desktop' > /dev/null; then
     wlrctl window focus 'app_id:GitHub Desktop'
 else
-    github-desktop $@
+    exec github-desktop $ARGS
 fi
