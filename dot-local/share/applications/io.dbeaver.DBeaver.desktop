@@ -5,7 +5,7 @@ Terminal=false
 Name=DBeaver Community
 GenericName=Universal Database Manager
 Comment=Universal Database Manager and SQL Client.
-Exec=dbeaver
+Exec=env GDK_BACKEND=x11 dbeaver
 Icon=dbeaver
 Categories=IDE;Development
 StartupWMClass=DBeaver
