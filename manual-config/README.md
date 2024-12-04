@@ -71,6 +71,10 @@ Append the contents of [hosts](hosts) to `/etc/hosts`.
 
 Open RedisInsight and click import (next to "Add Redis database"). Select [redis-connections.json](redis-connections.json).
 
+## Adding printers
+
+Once `cups.service` is running, go to `http://localhost:631/admin` and add the printer.
+
 ## Epson scanner over network
 
 1. Install `sane`, `imagescan` and `imagescan-plugin-networkscan`.

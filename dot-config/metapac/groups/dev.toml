@@ -1,0 +1,13 @@
+arch = [
+    "dbeaver",
+    "fnm-bin",
+    "github-cli",
+    "github-desktop-bin",
+    "graphviz",
+    "jd-gui-bin",
+    "mongodb-compass",
+    "netextender",
+    "postman-bin",
+    "python-requests",
+    "redisinsight-bin",
+]

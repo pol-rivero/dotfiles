@@ -1,4 +1,5 @@
 arch = [
+    "cups",
     "imagescan-plugin-networkscan",
     "imagescan",
     "simple-scan",

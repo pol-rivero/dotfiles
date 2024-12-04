@@ -14,4 +14,4 @@ hostname_groups_enabled = true
 # paths starting without a / are relative to the groups folder
 # Default: None
 [hostname_groups]
-archpc = ["base-arch", "base-nvidia-amd", "hyprland", "printing", "apps"]
+archpc = ["base-arch", "base-nvidia-amd", "hyprland", "printing", "apps", "dev"]

@@ -33,6 +33,7 @@ metapac unmanaged
 ```bash
 systemctl enable --now ufw.service      # Firewall
 systemctl enable --now cronie.service   # Cron jobs
+systemctl enable --now cups.service     # Printing
 systemctl --user enable --now ydotool.service  # Allow pasting from copyq and rofimoji
 ```
 
