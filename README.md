@@ -32,8 +32,8 @@ metapac unmanaged
 
 ```bash
 systemctl enable --now ufw.service      # Firewall
-systemctl enable --now ydotool.service  # Allow pasting from copyq and rofimoji
 systemctl enable --now cronie.service   # Cron jobs
+systemctl --user enable --now ydotool.service  # Allow pasting from copyq and rofimoji
 ```
 
 4. [Manually apply other configurations](manual-config/README.md)

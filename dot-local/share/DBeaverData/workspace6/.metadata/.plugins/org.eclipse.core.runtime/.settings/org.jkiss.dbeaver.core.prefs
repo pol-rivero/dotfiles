@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+org.jkiss.dbeaver.core.confirm.exit=always
+tipOfTheDayInitializer.notFirstRun=true
+ui.auto.update.check=false
+ui.auto.update.check.time=1733297917949
+ui.render.boolean.style.checked.align=CENTER
+ui.render.boolean.style.mode=ICON
+ui.render.boolean.style.null.align=CENTER
+ui.render.boolean.style.unchecked.align=CENTER
+ui.show.tip.of.the.day.on.startup=false

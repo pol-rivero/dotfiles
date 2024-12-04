@@ -30,6 +30,7 @@ arch = [
     "xdg-utils",
     "xorg-xhost",
     "yay-bin",
+    "zram-generator",
     "zsh-autosuggestions",
     "zsh-syntax-highlighting",
     "zsh",
