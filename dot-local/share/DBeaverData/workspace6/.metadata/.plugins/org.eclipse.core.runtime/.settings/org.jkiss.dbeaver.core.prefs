@@ -1,5 +1,7 @@
+connection.closeOnSleep=true
 eclipse.preferences.version=1
 org.jkiss.dbeaver.core.confirm.exit=always
+resultset.grid.value.format=UI
 tipOfTheDayInitializer.notFirstRun=true
 ui.auto.update.check=false
 ui.auto.update.check.time=1733297917949
