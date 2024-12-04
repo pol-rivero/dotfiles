@@ -71,11 +71,22 @@ Append the contents of [hosts](hosts) to `/etc/hosts`.
 
 Open RedisInsight and click import (next to "Add Redis database"). Select [redis-connections.json](redis-connections.json).
 
-## Adding printers
+## Epson printer over network
 
-Once `cups.service` is running, go to `http://localhost:631/admin` and add the printer.
+### Print
 
-## Epson scanner over network
+```bash
+# Add the printer (replace PRINTER_NAME and PRINTER_IP)
+lpadmin -p $PRINTER_NAME -E -v ipps://$PRINTER_IP/ipp/print -m everywhere
+# Set as default
+lpoptions -d $PRINTER_NAME
+# List printers
+lpstat -p -d
+```
+
+You can also use the CUPS web interface at [http://localhost:631/admin](http://localhost:631/admin).
+
+### Scan
 
 1. Install `sane`, `imagescan` and `imagescan-plugin-networkscan`.
 2. Create the file `/etc/utsushi/utsushi.conf` with [this content](utsushi.conf) (may need to change the model and IP)

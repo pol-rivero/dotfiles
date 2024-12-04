@@ -19,6 +19,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 export ZSH_COMPDUMP="$ZSH/cache/.zcompdump-$HOST"
 export SONARLINT_USER_HOME="$HOME/.cache/sonarlint"
+export JAVA_HOME="/usr/lib/jvm/default-runtime"
 
 source $ZSH/oh-my-zsh.sh
 
