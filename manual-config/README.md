@@ -3,13 +3,15 @@
 This directory contains configuration files that I wasn't able to automate.  
 If you don't have the `dotfiles.key` file, some files will be encrypted and most steps below probably won't be useful to you.
 
-## Skip sudo password
+## Skip sudo/polkit password
 
 1. Run `sudo visudo`
 2. Add the following line at the end of the file (replace `your_username` with your username):
     ```
     your_username ALL=(ALL) NOPASSWD: ALL
     ```
+3. Launch `seahorse` ("Passwords and Keys")
+4. Right-click "Login" and select "Change password". Change it to a blank password.
 
 ## ZSH + OMZ
 

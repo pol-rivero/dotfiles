@@ -485,8 +485,8 @@
       "script": "echo \u23fb",
       "tooltip-text": "Shutdown",
       "on-left-click": "shutdown now",
-      "on-middle-click": "",
-      "on-right-click": "reboot",
+      "on-middle-click": "reboot",
+      "on-right-click": "systemctl suspend",
       "on-scroll-up": "",
       "on-scroll-down": "",
       "root-css-name": "",
@@ -548,7 +548,8 @@
       "angle": 0.0,
       "sigrt": 34,
       "use-sigrt": false
-    }
+    },
+    "width-as-percentage": false
   },
   {
     "name": "left-panel",
