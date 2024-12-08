@@ -8,36 +8,50 @@ If you are not me, you (hopefully) won't have access to the `dotfiles.key` file 
 
 1. Clone the repository and apply the dotfiles:
 
-```bash
-yay -S git git-crypt stow metapac
-git clone https://github.com/pol-rivero/dotfiles ~/.local/share/dotfiles
-cd ~/.local/share/dotfiles
-git-crypt unlock /path/to/dotfiles.key  # If you have the key
-stow --dotfiles -t ~ .
-```
+    ```bash
+    yay -S git git-crypt stow metapac
+    git clone https://github.com/pol-rivero/dotfiles ~/.local/share/dotfiles
+    cd ~/.local/share/dotfiles
+    git-crypt unlock /path/to/dotfiles.key  # If you have the key
+    stow --dotfiles -t ~ .
+    ```
 
-2. Install packages:
+1. Install packages:
 
-```bash
-metapac sync
-```
+    ```bash
+    metapac sync
+    ```
 
-To list the untracked packages:
+    To list the untracked packages:
 
-```bash
-metapac unmanaged
-```
+    ```bash
+    metapac unmanaged
+    ```
 
-3. Start services:
+1. Start services:
 
-```bash
-systemctl enable --now ufw.service      # Firewall
-systemctl enable --now cronie.service   # Cron jobs
-systemctl enable --now cups.service     # Printing
-systemctl --user enable --now ydotool.service  # Allow pasting from copyq and rofimoji
-```
+    ```bash
+    systemctl enable --now ufw.service      # Firewall
+    systemctl enable --now cronie.service   # Cron jobs
+    systemctl enable --now cups.service     # Printing
+    systemctl --user enable --now ydotool.service  # Allow pasting from copyq and rofimoji
+    ```
 
-4. [Manually apply other configurations](manual-config/README.md)
+1. Install OMZ:
+
+    ```bash
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    ```
+
+    - This will also prompt you to change the shell to zsh.
+
+1. Apply dconf settings:
+
+    ```bash
+    cat ~/.config/dconf/user.plain | dconf load /
+    ```
+
+1. [Manually apply optional configurations](manual-config/README.md)
 
 ## Usage
 

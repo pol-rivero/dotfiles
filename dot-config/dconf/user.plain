@@ -1,0 +1,15 @@
+[org/nemo/preferences]
+click-policy='single'
+default-folder-viewer='list-view'
+show-hidden-files=true
+
+[org/cinnamon/desktop/applications/terminal]
+exec='terminator'
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=true
+sort-column='name'
+sort-order='ascending'
+type-format='category'

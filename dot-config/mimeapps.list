@@ -11,6 +11,8 @@ application/x-extension-xhtml=zen-alpha.desktop
 application/x-extension-xht=zen-alpha.desktop
 text/x-log=code.desktop
 application/x-desktop=code.desktop
+text/plain=code.desktop
+image/jpeg=org.gnome.Loupe.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen-alpha.desktop;
@@ -26,3 +28,5 @@ application/x-extension-xht=zen-alpha.desktop;
 text/x-log=code.desktop;
 application/x-desktop=code.desktop;
 text/x-java=code.desktop;
+text/plain=code.desktop;
+image/jpeg=org.gnome.Loupe.desktop;
