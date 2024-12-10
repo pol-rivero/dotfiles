@@ -20,7 +20,6 @@
         120,
         150
     ],
-    "editor.smoothScrolling": true,
     "editor.stickyScroll.defaultModel": "foldingProviderModel",
     "editor.stickyScroll.enabled": true,
     "editor.stickyScroll.maxLineCount": 20,
