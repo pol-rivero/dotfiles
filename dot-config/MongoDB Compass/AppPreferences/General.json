@@ -1,7 +1,7 @@
 {
   "id": "General",
-  "lastKnownVersion": "1.44.7",
-  "highestInstalledVersion": "1.44.7",
+  "lastKnownVersion": "1.45.0",
+  "highestInstalledVersion": "1.45.0",
   "showedNetworkOptIn": true,
   "theme": "OS_THEME",
   "telemetryAnonymousId": "14a75dcf-9f76-425b-8d0c-4b2032ec3cf6",
@@ -38,7 +38,6 @@
   "enableMultipleConnectionSystem": true,
   "proxy": "",
   "enableCreatingNewConnections": true,
-  "enableGlobalWrites": false,
   "enableGenAIFeaturesAtlasProject": true,
   "enableGenAISampleDocumentPassingOnAtlasProject": true,
   "enableGenAIFeaturesAtlasOrg": true,
@@ -48,5 +47,7 @@
   "showInsights": false,
   "enableRenameCollectionModal": false,
   "enableQueryHistoryAutocomplete": false,
-  "enableProxySupport": false
+  "enableProxySupport": false,
+  "enableRollingIndexes": false,
+  "enableGlobalWrites": false
 }
