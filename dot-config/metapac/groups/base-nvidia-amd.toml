@@ -1,5 +1,6 @@
 arch = [
     "amd-ucode",
+    "cuda",
     "libva-nvidia-driver",
     "nvidia",
 ]
