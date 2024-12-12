@@ -49,7 +49,7 @@ link-contents ~/.config/Code/vscode-dirs/[...] .vscode
 
 ## GUFW (Firewall GUI) profile
 
-Launch gufw and select File > Import profile. Select [LC.profile](LC.profile). In the Profile dropdown, make sure "LC" is selected.
+Launch gufw and select File > Import profile. Select [LC.profile](LC.profile) or [LC_Laptop.profile](LC_Laptop.profile). In the Profile dropdown, make sure "LC" is selected.
 
 Also run this command to allow the VPN to work:
 
