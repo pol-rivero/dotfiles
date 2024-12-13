@@ -81,7 +81,7 @@
         }
     ],
     "sonarlint.disableTelemetry": true,
-    "sonarlint.pathToNodeExecutable": "~/.local/share/fnm/aliases/default/bin/node",
+    "sonarlint.pathToNodeExecutable": ".local/share/fnm/aliases/default/bin/node",
     "sonarlint.rules": {
         "java:S106": {
             "level": "off"

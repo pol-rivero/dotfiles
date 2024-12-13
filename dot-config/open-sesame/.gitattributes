@@ -1,1 +1,2 @@
 config.json filter=git-crypt diff=git-crypt
+config-laptop.json filter=git-crypt diff=git-crypt
