@@ -11,6 +11,7 @@
 /workspace6/.metadata/.plugins/org.eclipse.e4.workbench
 /workspace6/.metadata/.plugins/org.eclipse.ui.ide
 /workspace6/.metadata/.plugins/org.eclipse.ui.workbench
+/workspace6/.metadata/.plugins/org.eclipse.ui.workbench.texteditor
 /workspace6/.metadata/.plugins/org.jkiss.dbeaver.core
 /workspace6/.metadata/.plugins/org.jkiss.dbeaver.ui
 *.bak

@@ -10,6 +10,11 @@ fi
 # If already running, focus the window manually. Github Desktop seems to fail at focusing the window on wayland.
 if pgrep -x 'github-desktop' > /dev/null; then
     wlrctl window focus 'app_id:GitHub Desktop'
+    if [ $? -ne 0 ]; then
+        notify-send "Killing github-desktop and starting a new instance..."
+        pkill github-desktop
+        exec github-desktop $ARGS
+    fi
 else
     exec github-desktop $ARGS
 fi
