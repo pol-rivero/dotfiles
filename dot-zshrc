@@ -34,8 +34,7 @@ dotfiles-remove() {
   (cd $DOTFILES_DIR && stow --dotfiles -D -t $HOME .)
 }
 dotfiles-apply() {
-  dotfiles-remove
-  (cd $DOTFILES_DIR && stow --dotfiles -t $HOME . --adopt)
+  (cd $DOTFILES_DIR && stow --dotfiles -t $HOME . --adopt --restow)
 }
 
 link-contents() {

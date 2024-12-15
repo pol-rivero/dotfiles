@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Hide mouse
+hyprctl keyword cursor:inactive_timeout 0.0001
+sleep 0.2
+
+# Store cursor position
+cursor_position=$(hyprctl cursorpos)
+x=$(echo $cursor_position | cut -d ',' -f 1)
+y=$(echo $cursor_position | cut -d ',' -f 2)
+
+
+XDG_CURRENT_DESKTOP=sway flameshot gui &
+sleep 0.7
+
+hyprctl dispatch movecursor $x $y
+
+# Show mouse
+hyprctl keyword cursor:inactive_timeout 0
+
