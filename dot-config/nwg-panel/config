@@ -175,7 +175,7 @@
       "all-outputs": false,
       "mark-xwayland": true,
       "angle": 0.0,
-      "image-size": 16,
+      "image-size": 18,
       "task-padding": 0
     },
     "hyprland-workspaces": {
@@ -396,7 +396,7 @@
       "all-outputs": false,
       "mark-xwayland": true,
       "angle": 0.0,
-      "image-size": 16,
+      "image-size": 18,
       "task-padding": 0
     },
     "hyprland-workspaces": {
@@ -735,7 +735,7 @@
       "all-outputs": false,
       "mark-xwayland": true,
       "angle": 0.0,
-      "image-size": 16,
+      "image-size": 18,
       "task-padding": 0
     },
     "hyprland-workspaces": {
