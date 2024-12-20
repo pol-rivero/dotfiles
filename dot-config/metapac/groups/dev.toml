@@ -12,4 +12,5 @@ arch = [
     "postman-bin",
     "python-requests",
     "redisinsight-bin",
+    "rsync",
 ]
