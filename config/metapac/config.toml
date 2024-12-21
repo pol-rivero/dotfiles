@@ -15,3 +15,4 @@ hostname_groups_enabled = true
 # Default: None
 [hostname_groups]
 archpc = ["base-arch", "base-nvidia-amd", "hyprland", "printing", "apps", "dev"]
+archlaptop = ["base-arch" "base-intel", "hyprland", "apps", "dev"]
