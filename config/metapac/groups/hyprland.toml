@@ -8,6 +8,7 @@ arch = [
     "gtkmm",
     "gtkmm3",
     "hypridle",
+    "hyprland-qtutils",
     "hyprland",
     "hyprpaper",
     "hyprpicker",
