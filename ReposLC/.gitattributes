@@ -1,2 +1,2 @@
 ColdFusion.code-workspace filter=git-crypt diff=git-crypt
-.vscode/**/* filter=git-crypt diff=git-crypt
+_.vscode/**/* filter=git-crypt diff=git-crypt
