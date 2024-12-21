@@ -6,6 +6,12 @@ If you are not me, you (hopefully) won't have access to the `dotfiles.key` file 
 
 ## Installation
 
+1. Install `yay` if needed.
+
+   ```bash
+   sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
+   ```
+
 1. Clone the repository and apply the dotfiles:
 
     ```bash
