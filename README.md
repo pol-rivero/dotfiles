@@ -22,6 +22,8 @@ If you are not me, you (hopefully) won't have access to the `dotfiles.key` file 
     RCRC=$HOME/.dotfiles/rcrc rcup
     ```
 
+    You should reboot before continuing with the next step.
+
 1. Install packages:
 
     ```bash
@@ -63,7 +65,7 @@ If you are not me, you (hopefully) won't have access to the `dotfiles.key` file 
 
 - [Create/update symlinks](http://thoughtbot.github.io/rcm/rcup.1.html): `rcup`
 - [Remove symlinks](http://thoughtbot.github.io/rcm/rcdn.1.html): `rcdn`
-- [Add new file to dotfiles](http://thoughtbot.github.io/rcm/mkrc.1.html): `mkrc <file>`
+- [Add unmanaged file to dotfiles](http://thoughtbot.github.io/rcm/mkrc.1.html): `mkrc <file>`
 - [List existing symlinks](http://thoughtbot.github.io/rcm/lsrc.1.html): `lsrc`
 
 

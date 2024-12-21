@@ -8,7 +8,6 @@ arch = [
     "fzf",
     "git-crypt",
     "git",
-    "grub",
     "iwd",
     "jq",
     "less",
