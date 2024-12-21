@@ -29,14 +29,6 @@ find() {
   command find "$@" 2> >(grep -v 'Permission denied' >&2)
 }
 
-DOTFILES_DIR="$HOME/.local/share/dotfiles"
-dotfiles-remove() {
-  (cd $DOTFILES_DIR && stow --dotfiles -D -t $HOME .)
-}
-dotfiles-apply() {
-  (cd $DOTFILES_DIR && stow --dotfiles -t $HOME . --adopt --restow)
-}
-
 link-contents() {
   if [ ! -d $1 ]; then
     echo "Directory not found: $1"

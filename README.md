@@ -9,11 +9,11 @@ If you are not me, you (hopefully) won't have access to the `dotfiles.key` file 
 1. Clone the repository and apply the dotfiles:
 
     ```bash
-    yay -S git git-crypt stow metapac
-    git clone https://github.com/pol-rivero/dotfiles ~/.local/share/dotfiles
-    cd ~/.local/share/dotfiles
+    yay -S git git-crypt rcm metapac
+    git clone https://github.com/pol-rivero/dotfiles ~/.dotfiles
+    cd ~/.dotfiles
     git-crypt unlock /path/to/dotfiles.key  # If you have the key
-    stow --dotfiles -t ~ .
+    RCRC=$HOME/.dotfiles/rcrc rcup
     ```
 
 1. Install packages:
@@ -53,16 +53,17 @@ If you are not me, you (hopefully) won't have access to the `dotfiles.key` file 
 
 1. [Manually apply optional configurations](manual-config/README.md)
 
-## Usage
+## RCM usage
 
-```bash
-dotfiles-apply   # Update symlinks
-dotfiles-remove  # Remove symlinks
-```
+- [Create/update symlinks](http://thoughtbot.github.io/rcm/rcup.1.html): `rcup`
+- [Remove symlinks](http://thoughtbot.github.io/rcm/rcdn.1.html): `rcdn`
+- [Add new file to dotfiles](http://thoughtbot.github.io/rcm/mkrc.1.html): `mkrc <file>`
+- [List existing symlinks](http://thoughtbot.github.io/rcm/lsrc.1.html): `lsrc`
+
 
 ## References
 
-https://youtu.be/y6XCebnB9gs
+- [RCM documentation](http://thoughtbot.github.io/rcm/)
 
-https://www.agwa.name/projects/git-crypt
+- [Git-crypt project page](https://www.agwa.name/projects/git-crypt)
 

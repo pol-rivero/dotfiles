@@ -44,7 +44,7 @@ Use `lsblk -f` or your preferred GUI tool.
 ```bash
 cd /my/project
 mkdir .vscode
-link-contents ~/.config/Code/vscode-dirs/[...] .vscode
+link-contents ~/GitHub/.vscode/[...] .vscode
 ```
 
 ## GUFW (Firewall GUI) profile

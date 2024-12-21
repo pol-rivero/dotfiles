@@ -1,0 +1,4 @@
+# http://thoughtbot.github.io/rcm/rcrc.5.html
+
+EXCLUDES="README.md manual-config"
+UNDOTTED="bin ReposLC GitHub"
