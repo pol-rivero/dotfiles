@@ -24,17 +24,11 @@ If you are not me, you (hopefully) won't have access to the `dotfiles.key` file 
 
     You should reboot before continuing with the next step.
 
-1. Install packages:
+1. Install packages: `metapac sync`
 
-    ```bash
-    metapac sync
-    ```
-
-    To list the untracked packages:
-
-    ```bash
-    metapac unmanaged
-    ```
+    - To list the untracked packages: `metapac unmanaged`
+    - After the first install, you may need to fix false positives with:  
+    `sudo pacman -D --asexplicit <package_named>`
 
 1. Start services:
 

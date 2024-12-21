@@ -1,3 +1,6 @@
 arch = [
+    "intel-media-driver",
     "intel-ucode",
+    "libva-intel-driver",
+    "vulkan-intel",
 ]
