@@ -1,10 +1,12 @@
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
-export ZSH="$HOME/.oh-my-zsh"
+export HISTFILE="$XDG_STATE_HOME/zsh/history"
 
 ZSH_THEME="mytheme"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
+
+# compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 # ENABLE_CORRECTION="true"
 unsetopt correct_all  
@@ -18,7 +20,6 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export ZSH_COMPDUMP="$ZSH/cache/.zcompdump-$HOST"
-export SONARLINT_USER_HOME="$HOME/.cache/sonarlint"
 export JAVA_HOME="/usr/lib/jvm/default-runtime"
 
 source $ZSH/oh-my-zsh.sh
@@ -40,8 +41,8 @@ link-contents() {
 }
 
 alias open="xdg-open"
-alias zshconfig="open ~/.zshrc"
-alias zshreload="source ~/.zshrc"
+alias zshconfig="open $HOME/.zshrc"
+alias zshreload="source $HOME/.zshrc"
 alias cat="bat"
 alias top="htop"
 alias cdesk="cd ~/Desktop"

@@ -1,0 +1,33 @@
+[gui]
+	editor = code
+[core]
+	editor = nano
+
+[user]
+	name = Pol Rivero
+	email = 65060696+pol-rivero@users.noreply.github.com
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[credential]
+	helper = store
+
+[init]
+	defaultBranch = main
+
+# https://stackoverflow.com/questions/21307793/set-git-config-values-for-all-child-folders/
+[includeIf "gitdir:~/ReposLC/"]
+    path = ~/.config/git/gitconfig-lc
+
+[maintenance]
+	repo = ~/ReposLC/core
+	repo = ~/ReposLC/administrator
+	repo = ~/ReposLC/common
+	repo = ~/ReposLC/api-sync
+
+[alias]
+    prune-branches = "!git fetch --prune && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -d"

@@ -31,7 +31,7 @@ else
 fi
 
 # Set the directory defaults for system sounds.
-userDIR="$HOME/.local/share/sounds"
+userDIR="$XDG_DATA_HOME/sounds"
 systemDIR="/usr/share/sounds"
 defaultTheme="freedesktop"
 
